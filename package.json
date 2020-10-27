@@ -1,0 +1,21 @@
+{
+  "name": "shopping-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "user-start": "cd user-service && pm2 start ecosystem.config.js",
+    "item-start": "cd item-service && pm2 start ecosystem.config.js",
+    "buy-start": "cd buy-service && pm2 start ecosystem.config.js",
+    "eventbus-start": "cd eventbus && pm2 start ecosystem.config.js",
+    "start": "npm run user-start & npm run item-start & npm run buy-start & npm run eventbus-start",
+    "user-install": "cd user-service && npm install",
+    "item-install": "cd item-service && npm install",
+    "buy-install": "cd buy-service && npm install",
+    "eventbus-install": "cd eventbus && npm install",
+    "install": "npm run user-install & npm run item-install & npm run buy-install & npm run eventbus-install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
